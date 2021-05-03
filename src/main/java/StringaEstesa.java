@@ -1,7 +1,7 @@
 import java.util.regex.Pattern;
 
 /**
- * Classe con
+ * Classe per il controllo sulle stringhe
  */
 public class StringaEstesa {
 
