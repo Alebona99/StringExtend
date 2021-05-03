@@ -46,6 +46,13 @@ class StringaEstesaTest {
     }
 
     @Test
+    void isEmpty_spaces(){
+        StringaEstesa str = new StringaEstesa(" ");
+        Assertions.assertFalse(str.isEmpty());
+        Assertions.assertEquals(str.isEmpty(), StringUtils.isEmpty(str.getValue()));
+    }
+
+    @Test
     void isBlank_spazi() {
         StringaEstesa string = new StringaEstesa(" ");
         Assertions.assertTrue(string.isBlank());

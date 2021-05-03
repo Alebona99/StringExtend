@@ -64,8 +64,4 @@ public class StringaEstesa {
         return this.value;
     }
 
-    public static void main(String[] args) {
-        StringaEstesa str = new StringaEstesa("1 2");
-        System.out.println(str.isNumeric());
-    }
 }
