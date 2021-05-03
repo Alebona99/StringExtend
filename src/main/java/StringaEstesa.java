@@ -1,3 +1,8 @@
+import java.util.regex.Pattern;
+
+/**
+ * Classe con
+ */
 public class StringaEstesa {
 
     private String value;
@@ -46,9 +51,9 @@ public class StringaEstesa {
      * Uso la regular expression per il controllo sulla stringa
      * @return Ritorna true se la stringa è composta da numeri
      */
-    public boolean isNUmeric(){
-        return value.matches("^(\\(?\\+?[0-9]*\\)?)?[0-9_\\- \\(\\)]*$");
-    }
+    public boolean isNumeric(){
+        return value.matches("\\d+");
+    }  //^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$
 
 
     /**
@@ -59,4 +64,8 @@ public class StringaEstesa {
         return this.value;
     }
 
+    public static void main(String[] args) {
+        StringaEstesa str = new StringaEstesa("1 2");
+        System.out.println(str.isNumeric());
+    }
 }
