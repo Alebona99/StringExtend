@@ -32,7 +32,15 @@ class StringaEstesaTest {
     @Test
     void isEmpty_with_value(){
         StringaEstesa string = new StringaEstesa("he");
-        Assertions.assertTrue(string.isEmpty());
+        Assertions.assertFalse(string.isEmpty());
+
+        Assertions.assertEquals(string.isEmpty(), StringUtils.isEmpty(string.getValue()));
+    }
+
+    @Test
+    void isEmpty_with_numbers(){
+        StringaEstesa string = new StringaEstesa("1 2 3");
+        Assertions.assertFalse(string.isEmpty());
 
         Assertions.assertEquals(string.isEmpty(), StringUtils.isEmpty(string.getValue()));
     }
@@ -48,7 +56,7 @@ class StringaEstesaTest {
     @Test
     void isBlank_with_value() {
         StringaEstesa string = new StringaEstesa("giuu");
-        Assertions.assertTrue(string.isBlank());
+        Assertions.assertFalse(string.isBlank());
 
         Assertions.assertEquals( string.isBlank(), StringUtils.isBlank(string.getValue()) );
     }
@@ -56,7 +64,7 @@ class StringaEstesaTest {
     @Test
     void isBlank_initial_spazi() {
         StringaEstesa string = new StringaEstesa(" hhhi");
-        Assertions.assertTrue(string.isBlank());
+        Assertions.assertFalse(string.isBlank());
 
         Assertions.assertEquals( string.isBlank(), StringUtils.isBlank(string.getValue()) );
     }
